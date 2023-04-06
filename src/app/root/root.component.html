@@ -1,0 +1,31 @@
+<input
+  class="form-check-input"
+  type="radio"
+  id="sim"
+  name="juros"
+  [(ngModel)]="option"
+  [value]="1"
+/>
+<label for="sim">Juros Simples</label><br />
+<input
+  class="form-check-input"
+  type="radio"
+  id="comp"
+  name="juros"
+  [(ngModel)]="option"
+  [value]="2"
+/>
+<label for="comp">Juros Compostos</label><br />
+<br />
+
+<div *ngIf="option == '1'">
+  <h4>Opção Juros Simples</h4>
+  <hr />
+  <br />
+  <app-juros-simples> </app-juros-simples>
+</div>
+<div *ngIf="option == '2'">
+  <h4>Opção Juros Compostos</h4>
+  <hr />
+  <br /><app-juros-compostos> </app-juros-compostos>
+</div>
